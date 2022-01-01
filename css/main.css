@@ -199,6 +199,11 @@ nav.menu-btn {
   display: block;
 }
 
+.slide-out-to-right {
+  -webkit-animation: slideOutToRight 0.7s;
+          animation: slideOutToRight 0.7s;
+}
+
 nav {
   position: fixed;
   z-index: 999;
@@ -208,6 +213,8 @@ nav {
   background: #20272E;
   height: 100vh;
   padding: 1em;
+  -webkit-animation: slideInFromRight 0.7s;
+          animation: slideInFromRight 0.7s;
 }
 
 nav ul.primary-nav {
@@ -230,6 +237,50 @@ nav li:hover {
   float: right;
   margin: .5em;
   cursor: pointer;
+}
+
+@-webkit-keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideOutToRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 
 @media only screen and (min-width: 768px) {

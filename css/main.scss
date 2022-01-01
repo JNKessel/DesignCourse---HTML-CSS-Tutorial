@@ -198,6 +198,10 @@ nav.menu-btn {
     display: block;
 }
 
+.slide-out-to-right {
+    animation: slideOutToRight 0.7s;
+}
+
 nav {
     position: fixed;
     z-index: 999;
@@ -207,6 +211,7 @@ nav {
     background: #20272E;
     height: 100vh;
     padding: 1em;
+    animation: slideInFromRight 0.7s;
 
     ul.primary-nav {
         margin-top: 5em;
@@ -233,6 +238,30 @@ nav {
     margin: .5em;
     cursor: pointer;
 }
+
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
 
 @media only screen and (min-width: 768px) {
     .mobile-menu, .mobile-menu-exit {
